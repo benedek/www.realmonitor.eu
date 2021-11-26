@@ -28,6 +28,7 @@ $(window).on("load", function() {
         type: "POST",
         crossDomain: true,
         data: JSON.stringify(p),
+        headers: { 'Access-Control-Allow-Origin': 'https://www.realmonitor.eu' },
         dataType: "json",
         success: function (r) {
           if (r && r.ok === true) {
@@ -68,9 +69,7 @@ $(window).on("load", function() {
         });
     };
 
-
-     //Slow Scroll
-    jQuery('nav ul li a, .mobile-menu ul li a').on("click", function (e) {
+    function slowSlide (e) {
         if (jQuery(this).attr('href') === '#')
         {
             e.preventDefault();
@@ -89,7 +88,11 @@ $(window).on("load", function() {
                 return false;
             }
         }
-    });
+    }
+
+     //Slow Scroll
+    jQuery('nav ul li a, .mobile-menu ul li a').on("click", slowSlide);
+    jQuery('#explore').on('click', slowSlide);
 
     jQuery(window).on('scroll resize', function () {
     var currentSection = null;
