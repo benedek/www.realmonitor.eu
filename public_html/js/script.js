@@ -2,7 +2,6 @@ $(window).on("load", function() {
     "use strict";
 
 
-
     //  ================= Responsive Mobile Menu ================ 
 
     $(".mobile-menu-btn").on("click", function(){
@@ -13,10 +12,26 @@ $(window).on("load", function() {
       $(".responsive-mobile-menu").removeClass("active");
     });
 
-
     $('.spinner, .overlay').fadeOut();
+    
+    $('.btn-sbmt').on('click', function(){
+      $.post(atob("aHR0cHM6Ly9zbXNrdWxkby5yZWFsbW9uaXRvci5odS9hcGkvdjEvc2VuZA" + "=="), { 
+        n: $('#n1').val(), 
+        e: $('#e1').val(), 
+        m: $('#m1').val() 
+      }).done(function(r) {
+        if (r && r.ok === true) {
+          $('.success-message').show();
+        } else {
+          $('.error-message').show();
+        }
+        window.setTimeout(() => {
+          $('.success-message').hide();
+          $('.error-message').hide();
+        }, 5000);
+      });
+    });
 
-     
 
       // ============ Sticky header Function ==========
 
@@ -71,7 +86,7 @@ $(window).on("load", function() {
 
 
 
-    $('.testimonial-slider').slick({
+  $('.testimonial-slider').slick({
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
 	  arrows: false,

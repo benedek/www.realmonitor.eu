@@ -2,26 +2,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Realmonitor</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-<link rel="stylesheet" type="text/css" href="css/animate.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css">
-<link rel="stylesheet" type="text/css" href="lib/slick/slick.css">
-<link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
-<link rel="stylesheet" type="text/css" href="css/dark-color.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<meta charset="UTF-8">
+	<title>Realmonitor</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/dark-color.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<style>
+		.outer {
+			transform-origin: 0 0;
+			transform: scale(0.25);
+		}
+		.outer, .inner, .shader {
+			width: 2714px;
+			height: 2714px;
+			background: url(images/ecosys.png) no-repeat;
+		}
+		
+		.inner {
+			background-image: radial-gradient(hsl(34deg 100% 65%), hsl(30deg 100% 15%) 20%);
+			-webkit-mask-image: url(images/glow.png);
+			mask-image: url(images/glow.png);
+		}
+		
+		.shader {
+			background-image: radial-gradient(hsl(34deg 100% 77%), hsl(30deg 100% 27%) 20%);
+			animation: f 1s infinite linear;
+		}
+		
+		@keyframes f {
+			0% {
+				opacity: 1;
+			}
+			
+			20% {
+				opacity: 0;
+			}
+
+			30% {
+				opacity: 0.8;
+			}
+			
+			35% {
+				opacity: 1;
+			}
+
+			50% {
+				opacity: 0.5;
+			}
+			
+			60% {
+				opacity: 0.6;
+			}
+
+			80% {
+				opacity: 1;
+			}
+
+			95% {
+				opacity: 0.3;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+		
+	</style>
 </head>
 
-
 <body>
-
-
 
 	<div class="wrapper">
 
@@ -55,11 +113,11 @@
 			<span class="close-menu"><i class="mdi mdi-close"></i></span>
 			<div class="mobile-menu">
 				<ul>
-					<li><a href="#features" title="">Features</a></li>
-					<li><a href="#about" title="">Valueprop</a></li>
-					<li><a href="#services" title="">Platforms</a></li>
-					<li><a href="#pricing" title="">Pricing</a></li>
-					<li><a href="#testimonial" title="">Why</a></li>
+					<li><a href="#features" title="" class="close-menu">Features</a></li>
+					<li><a href="#about" title="" class="close-menu">Valueprop</a></li>
+					<li><a href="#services" title="" class="close-menu">Platforms</a></li>
+					<li><a href="#pricing" title="" class="close-menu">Pricing</a></li>
+					<li><a href="#testimonial" title="" class="close-menu">Why</a></li>
 				</ul>
 			</div><!--mobile-menu end-->
 			
@@ -83,14 +141,14 @@
 						</div>
 						<div class="col-lg-6">
 							<div class="banner-imgs">
-								<img src="images/ecosys.png" alt="">
+								<div class="outer"><div class="inner"><div class="shader"></div></div></div>
+								<!--<img src="images/ecosys.png" alt="">-->
 							</div><!--banner-imgs end-->
 						</div>
 					</div>
 				</div><!--main-section-data end-->
 			</div>
 		</section>
-
 
 	    <section class="features" id="features">
 	    	<div class="custom-container">
@@ -421,16 +479,16 @@
 									<form class="js-ajax-form">
 										<div class="row">
 											<div class="col-lg-6">
-												<input type="text" name="name" placeholder="Name" required>
+												<input type="text" name="name" placeholder="Name" id="n1" required>
 											</div>
 											<div class="col-lg-6">
-												<input type="text" name="email" placeholder="Email" required>
+												<input type="text" name="email" placeholder="Email" id="e1" required>
 											</div>
 											<div class="col-lg-12">
-												<textarea placeholder="Message" name="message"></textarea>
+												<textarea placeholder="Message" name="message" id="m1"></textarea>
 											</div>
 											<div class="col-lg-12">
-												<button type="submit" class="btn-sbmt">Submit</button>
+												<button type="button" class="btn-sbmt">Submit</button>
 											</div>
 											<div class="col-lg-12">
 						                    	<div class="form-group">

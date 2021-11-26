@@ -302,7 +302,7 @@ a:hover {
 	float: left;
 	width: 100%;
 	padding-top: 298px;
-	padding-left: 50px;
+	/* padding-left: 50px; */
 }
 .banner-text h3 {
 	font-size: 24px;
