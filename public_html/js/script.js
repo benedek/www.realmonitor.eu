@@ -15,10 +15,13 @@ $(window).on("load", function() {
     $('.spinner, .overlay').fadeOut();
     
     $('.btn-sbmt').on('click', function(){
+      var n = $('#n1');
+      var e = $('#e1');
+      var m = $('#m1');
       var p = { 
-        "n": $('#n1').val(), 
-        "e": $('#e1').val(), 
-        "m": $('#m1').val() 
+        "n": n.val(), 
+        "e": e.val(), 
+        "m": m.val() 
       };
       $.ajax({
         url: atob("aHR0cHM6Ly9zbXNrdWxkby5yZWFsbW9uaXRvci5odS9hcGkvdjEvc2VuZA" + "=="),
@@ -33,6 +36,9 @@ $(window).on("load", function() {
             $('.error-message').show();
           }
           window.setTimeout(() => {
+            n.val('');
+            e.val('');
+            m.val('');
             $('.success-message').hide();
             $('.error-message').hide();
           }, 5000);
