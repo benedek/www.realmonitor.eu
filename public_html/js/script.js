@@ -28,7 +28,6 @@ $(window).on("load", function() {
         type: "POST",
         crossDomain: true,
         data: JSON.stringify(p),
-        headers: { 'Access-Control-Allow-Origin': 'https://www.realmonitor.eu' },
         dataType: "json",
         success: function (r) {
           if (r && r.ok === true) {
