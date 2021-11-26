@@ -15,20 +15,36 @@ $(window).on("load", function() {
     $('.spinner, .overlay').fadeOut();
     
     $('.btn-sbmt').on('click', function(){
-      $.post(atob("aHR0cHM6Ly9zbXNrdWxkby5yZWFsbW9uaXRvci5odS9hcGkvdjEvc2VuZA" + "=="), { 
-        n: $('#n1').val(), 
-        e: $('#e1').val(), 
-        m: $('#m1').val() 
-      }).done(function(r) {
-        if (r && r.ok === true) {
-          $('.success-message').show();
-        } else {
+      var p = { 
+        "n": $('#n1').val(), 
+        "e": $('#e1').val(), 
+        "m": $('#m1').val() 
+      };
+      $.ajax({
+        url: atob("aHR0cHM6Ly9zbXNrdWxkby5yZWFsbW9uaXRvci5odS9hcGkvdjEvc2VuZA" + "=="),
+        type: "POST",
+        crossDomain: true,
+        data: JSON.stringify(p),
+        dataType: "json",
+        success: function (r) {
+          if (r && r.ok === true) {
+            $('.success-message').show();
+          } else {
+            $('.error-message').show();
+          }
+          window.setTimeout(() => {
+            $('.success-message').hide();
+            $('.error-message').hide();
+          }, 5000);
+        },
+        error: function (xhr, status) {
+          console.log(xhr);
           $('.error-message').show();
+          window.setTimeout(() => {
+            $('.success-message').hide();
+            $('.error-message').hide();
+          }, 5000);
         }
-        window.setTimeout(() => {
-          $('.success-message').hide();
-          $('.error-message').hide();
-        }, 5000);
       });
     });
 
