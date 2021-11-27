@@ -1,550 +1,224 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="zxx">
 <head>
+	<title>SolMusic | HTML Template</title>
 	<meta charset="UTF-8">
-	<title>Realmonitor</title>
+	<meta name="description" content="SolMusic HTML Template">
+	<meta name="keywords" content="music, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css">
-	<link rel="stylesheet" type="text/css" href="lib/slick/slick.css">
-	<link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
-	<link rel="stylesheet" type="text/css" href="css/dark-color.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-	<style>
-		.outer {
-			transform-origin: 0 0;
-			transform: scale(0.25);
-		}
-		.outer, .inner, .shader {
-			width: 2714px;
-			height: 2714px;
-			background: url(images/ecosys.png) no-repeat;
-		}
-		
-		.inner {
-			background-image: radial-gradient(hsl(34deg 100% 65%), hsl(30deg 100% 15%) 20%);
-			-webkit-mask-image: url(images/glow.png);
-			mask-image: url(images/glow.png);
-		}
-		
-		.shader {
-			background-image: radial-gradient(hsl(34deg 100% 77%), hsl(30deg 100% 27%) 20%);
-			animation: f 1s infinite linear;
-		}
-		
-		@keyframes f {
-			0% {
-				opacity: 1;
-			}
-			
-			20% {
-				opacity: 0;
-			}
+	
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
 
-			30% {
-				opacity: 0.8;
-			}
-			
-			35% {
-				opacity: 1;
-			}
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+ 
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
 
-			50% {
-				opacity: 0.5;
-			}
-			
-			60% {
-				opacity: 0.6;
-			}
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="css/style.css"/>
 
-			80% {
-				opacity: 1;
-			}
 
-			95% {
-				opacity: 0.3;
-			}
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
-			100% {
-				opacity: 1;
-			}
-		}
-		
-	</style>
 </head>
-
 <body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
 
-	<div class="wrapper">
+	
 
-
-		<div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>
-
-		<header>
-			<div class="custom-container">
-				<div class="header-data">
-					<div class="logo">
-						<a href="#" title=""><img src="images/logo2.png" alt=""></a>
-					</div>
-					<div class="mobile-menu-btn">
-						<a href="#" title=""><i class="fa fa-bars"></i></a>
-					</div><!-- mobile-menu-btn end-->
-					
-					<nav>
-						<ul>
-							<li><a href="#features" title="">Features</a></li>
-							<li><a href="#about" title="">Valueprop</a></li>
-							<li><a href="#services" title="">Platforms</a></li>
-							<li><a href="#pricing" title="">Pricing</a></li>
-							<li><a href="#testimonial" title="">Why</a></li>
-						</ul>
-					</nav>
-				</div><!--header-data end-->
-			</div>
-		</header><!--header end-->
-
-		<div class="responsive-mobile-menu">
-			<span class="close-menu"><i class="mdi mdi-close"></i></span>
-			<div class="mobile-menu">
-				<ul>
-					<li><a href="#features" title="" class="close-menu">Features</a></li>
-					<li><a href="#about" title="" class="close-menu">Valueprop</a></li>
-					<li><a href="#services" title="" class="close-menu">Platforms</a></li>
-					<li><a href="#pricing" title="" class="close-menu">Pricing</a></li>
-					<li><a href="#testimonial" title="" class="close-menu">Why</a></li>
-				</ul>
-			</div><!--mobile-menu end-->
-			
-			<div class="mb-copyright-text">
-				<p>© AppMicron 2018. All Rights Reseverd Design by Paul Murren</p>
-			</div><!--mb-copyright-text end-->
-		</div><!--responsive-mobile-menu end-->
-
-
-		<section class="main-section">
-			<div class="custom-container">
-				<div class="main-section-data" style="max-height:700px;">
+	<!-- Hero section -->
+	<section class="hero-section">
+		<div class="hero-slider owl-carousel">
+			<div class="hs-item">
+				<div class="container">
 					<div class="row">
-						<div class="col-lg-5">
-							<div class="banner-text">
-								<h3>Enter to the</h3>
-								<h2>HOUSING ECOSYSTEM</h2>
-								<p>Realmonitor is the entry point for banks into people's housing journey which always starts with the search for a property. Realmonitor provides the ultimate property searching app, whitelabeled to the bank.</p>
-								<a href="#features" id="explore" title="">explore</a>
-							</div><!--banner-text end-->
+						<div class="col-lg-6">
+							<div class="hs-text">
+								<h2><span>Alkoss</span> </br> jó célért </br> jó társaságban</h2>
+								<p>Itt a helyed, ha igényes kódot írsz és szívesen részt veszel a tervezésben is. Ha örömmel alkotsz egy összetartó csapat megbecsült tagjaként és tényleg hatni akarsz a világ folyására. És ha ismerősen csengenek ezek a szavak </br></br>
+								<strong><i>#java #cloud #docker #kubernetes #nosql #appengine #aws #pubsub #opencv #nlp</i></strong>
+								</p><a href="https://adpqfg0n66k.typeform.com/skawa" class="site-btn">Csatlakoznék</a>
+							</div>
 						</div>
 						<div class="col-lg-6">
-							<div class="banner-imgs">
-								<div class="outer"><div class="inner"><div class="shader"></div></div></div>
-								<!--<img src="images/ecosys.png" alt="">-->
-							</div><!--banner-imgs end-->
+							<div class="hr-img">
+								<img src="img/hero-bg.png" alt="">
+							</div>
 						</div>
 					</div>
-				</div><!--main-section-data end-->
-			</div>
-		</section>
-
-	    <section class="features" id="features">
-	    	<div class="custom-container">
-	    		<div class="features-sec">
-	    			<div class="row">
-	    				<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-	    					<div class="feature">
-	    						<div class="feature-icon">
-	    							<span><i class="mdi mdi-cached"></i></span>
-	    						</div><!--feature-icon end-->
-	    						<div class="feature-info">
-	    							<h3>360°</h3>
-	    							<p>Complete market monitoring, including listing sites, facebook marketplace and groups.</p>
-	    						</div><!--feature-info end-->
-	    					</div><!--feature end-->
-	    				</div>
-	    				<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-	    					<div class="feature">
-	    						<div class="feature-icon">
-	    							<span><i class="mdi mdi-clock"></i></span>
-	    						</div><!--feature-icon end-->
-	    						<div class="feature-info">
-	    							<h3>24 hrs</h3>
-	    							<p>Instant push notification when a good catch appears on the market. 24 hrs. </p>
-	    						</div><!--feature-info end-->
-	    					</div><!--feature end-->
-	    				</div>
-	    				<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-	    					<div class="feature">
-	    						<div class="feature-icon">
-	    							<span><i class="mdi mdi-scale-balance"></i></span>
-	    						</div><!--feature-icon end-->
-	    						<div class="feature-info">
-	    							<h3>Price comparison</h3>
-	    							<p>Realmonitor locates the best offer for properties, that are advertised by several agents.</p>
-	    						</div><!--feature-info end-->
-	    					</div><!--feature end-->
-	    				</div>
-	    				<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-	    					<div class="feature">
-	    						<div class="feature-icon">
-	    							<span><i class="mdi mdi-cellphone"></i></span>
-	    						</div><!--feature-icon end-->
-	    						<div class="feature-info">
-	    							<h3>Android & iOS</h3>
-	    							<p>Available as native mobile application for Android and iOS mobile phones.</p>
-	    						</div><!--feature-info end-->
-	    					</div><!--feature end-->
-	    				</div>
-	    			</div>
-	    		</div><!--features-sec end-->
-	    	</div>
-	    </section>
-
-	    <section class="about" id="about">
-	    	<div class="fixed-bg bg3"></div>
-	    	<div class="custom-container">
-	    		<div class="about-sec">
-	    			<div class="row">
-	    				<div class="col-lg-4">
-	    					<div class="about-img">
-	    						<img src="images/mobil1.png" alt="">
-	    					</div><!--srvc-img end-->
-	    				</div>
-	    				<div class="col-lg-8">
-	    					<div class="about-list">
-	    						<div class="about-info">
-	    							<div class="about-num">
-	    								<span>01.</span>
-	    							</div><!--service-num end-->
-	    							<div class="abt-info">
-	    								<h3>Mortgage leads</h3>
-	    								<p>Realmonitor provides thousands of mortgage loan prospects with super early engagement. They'll be engaged to the bank via the whitelabeled mobile app at the moment they start to seek a home.</p>
-	    							</div><!--srvc-info end-->
-	    						</div><!--service-info end-->
-	    						<div class="about-info">
-	    							<div class="about-num st2">
-	    								<span>02.</span>
-	    							</div><!--service-num end-->
-	    							<div class="abt-info">
-	    								<h3>Exclusive channel</h3>
-	    								<p>The mobile application provides the bank an exclusive communication channel and instant feedback about people's actual housing challenges and their searching profile.</p>
-	    							</div><!--srvc-info end-->
-	    						</div><!--service-info end-->
-	    						<div class="about-info">
-	    							<div class="about-num st3">
-	    								<span>03.</span>
-	    							</div><!--service-num end-->
-	    							<div class="abt-info">
-	    								<h3>Ultimate market knowledge</h3>
-	    								<p>The bank will have the most current and complete knowledge about the real estate market, by having access to the people's searching profiles and all the available property on the market at the same time.</p>
-	    							</div><!--srvc-info end-->
-	    						</div><!--service-info end-->
-	    						
-	    						<!--<a href="#" title="">Show me the app</a>-->
-	    					</div><!--services-list end-->
-
-	    					<div style="display:inline-flex;">
-	    						<a href='https://play.google.com/store/apps/details?id=hu.realmonitor.app.android&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="position:relative;left:-5px;">
-	    							<img height="84" width="205" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
-	    						</a>
-
-								<a href="https://apps.apple.com/us/app/ingatlanhirdet%C3%A9s-figyel%C5%91/id1500556144?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 10px; width: 250px; height: 83px;position:relative;left:-34px;top:13px;">
-									<img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1595548800&h=adc25504dc6a3300e4d2b51d082d6a64" alt="Download on the App Store" style="border-radius: 13px; width: 230px; height: 57px;">
-								</a>
-
-							</div>
-	    				</div>
-	    			</div>
-	    		</div><!--services-sec end-->
-	    	</div>
-	    </section>
-
-	    <section class="services" id="services">
-	    	<div class="fixed-bg bg4"></div>
-	    	<div class="custom-container">
-	    		<div class="services-sec">
-	    			<div class="row">
-	    				<div class="col-lg-4 no-pd">
-	    					<div class="services-list">
-	    						<div class="service-details">
-	    							<span><i class="mdi mdi-checkbox-marked-circle-outline"></i></span>
-	    							<div class="service-info">
-	    								<h3>Website presence</h3>
-	    								<p>Realmonitor is available as a website where people can search in the most complete property advertisement datasource</p>
-	    							</div><!--service-info end-->
-	    						</div><!--service-details end-->
-	    						<div class="service-details">
-	    							<span><i class="mdi mdi-checkbox-marked-circle-outline"></i></span>
-	    							<div class="service-info">
-	    								<h3>Mobile application</h3>
-	    								<p>Realmonitor is available as a native application, providing instant push notification about the best catches</p>
-	    							</div><!--service-info end-->
-	    						</div><!--service-details end-->
-	    						<div class="service-details">
-	    							<span><i class="mdi mdi-checkbox-marked-circle-outline"></i></span>
-	    							<div class="service-info">
-	    								<h3>Browser extension</h3>
-	    								<p>Realmonitor is available as a browser extension, that shows if a better offer is available for the property on the screen</p>
-	    							</div><!--service-info end-->
-	    						</div><!--service-details end-->
-	    						<div class="service-details">
-	    							<span><i class="mdi mdi-checkbox-marked-circle-outline"></i></span>
-	    							<div class="service-info">
-	    								<h3>Simple SMS. Yes.</h3>
-	    								<p>Realmonitor is available as a plain SMS notification solution to people with lack of IT skills or who prefers simplicity</p>
-	    							</div><!--service-info end-->
-	    						</div><!--service-details end-->
-	    					</div><!--services-list end-->
-	    				</div>
-	    				<div class="col-lg-8">
-	    					<div class="main-srv-sec">
-		    					<div class="service-img">
-		    						<img src="images/transp.png" alt="">
-		    						<a href="https://www.youtube.com/watch?v=kKouO3iq8iE" title="" class="html5lightbox"><img src="images/play.png" alt=""></a>
-		    					</div><!--service-img end-->
-		    					<div class="service-main-info">
-		    						<h3>We bring transparency</h3>
-		    						<p>In the CEE region properties are usually advertised by several agents on the market, which brings pricing discrepancies and anomalities to the market. Once the owners realise, that the initial price won't bring buyers, they reduce the selling price for the next agent they make contract with. All of a sudden former agents are advertising the property on higher, the new agents on a lower price bringing disrepancies to the market. Realmonitor discovers these anomalities and shows the best offer to the buyers with its most current price for any property. </p>
-		    					</div><!--service-main-info end-->
-	    					</div><!--main-srv-sec end-->
-	    				</div>
-	    			</div>
-	    		</div><!--services-sec end-->
-	    	</div>
-	    </section>
-
-	    <section class="pricing" id="pricing">
-	    	<div class="fixed-bg bg5"></div>
-	    	<div class="custom-container">
-	    		<div class="heading st1">
-	    			<h3>Pricing</h3>
-	    		</div><!--heading end-->
-	    		<div class="pricing-plan">
-	    			<div class="row">
-	    				<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-	    					<div class="price">
-	    						<div class="price-head">
-	    							<h4>Setup</h4>
-	    							<ul>
-	    								<li>
-	    									<h3><span>€</span>48<span>k</span></h3>
-	    								</li>
-	    								
-	    							</ul>
-	    						</div><!--price-head end-->
-	    						<p>Application and backend configuration for the market, finetuning to the bank. Four months free pilot.</p>
-	    						
-	    					</div><!--price end-->
-	    				</div>
-	    				<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-	    					<div class="price">
-	    						<div class="price-head">
-	    							<h4>4 months pilot</h4>
-	    							<ul>
-	    								<li>
-	    									<h3><span>€</span>0</h3>
-	    								</li>
-	    								
-	    							</ul>
-	    						</div><!--price-head end-->
-	    						<p>Fine tuned application whitelabeled to the bank and four months free pilot gathering mortgage leads.</p>
-	    						
-	    					</div><!--price end-->
-	    				</div>
-	    				<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-	    					<div class="price">
-	    						<div class="price-head">
-	    							<h4>Live project</h4>
-	    							<ul>
-	    								<li>
-	    									<h3><span>€</span>1</h3>
-	    								</li>
-	    								<li>
-	    									<span>per lead</span>
-	    									<b>/ month</b>
-	    								</li>
-	    							</ul>
-	    						</div><!--price-head end-->
-	    						<p>Fine tuned application whitelabeled to the bank with non exclusivity right in the country.</p>
-	    						
-	    					</div><!--price end-->
-	    				</div>
-	    				<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-	    					<div class="price">
-	    						<div class="price-head">
-	    							<h4>Exclusive</h4>
-	    							<ul>
-	    								<li>
-	    									<h3><span> </span></h3>
-	    								</li>
-	    								<li>
-	    									<span>ask for quote</span>
-	    								</li>
-	    							</ul>
-	    						</div><!--price-head end-->
-	    						<p>Fine tuned application whitelabeled to the bank with exclusivity right in the country.</p>
-	    						<a href="https://adpqfg0n66k.typeform.com/forbanks" title="">Get a quote</a>
-	    					</div><!--price end-->
-	    				</div>
-	    			</div>
-	    		</div><!--pricing-plan end-->
-	    	</div>
-	    </section>
-
-		<section class="testimonial" id="testimonial">
-			<div class="custom-container">
-				<div class="testimonial-slider">
-					<div class="user-comment">
-						<p>"By 2025, housing ecosystems will generate annual revenues approaching $3.8 trillion globally."</p>
-					</div><!--user-comment end-->
-					<div class="user-comment">
-						<p>"A home is an important element in a person´s life, and we want to be more available to customers, to better meet their needs."</p>
-					</div><!--user-comment end-->
-					<div class="user-comment">
-						<p>"Zillow used to just power your home search. Now you can buy, sell, or finance your home there. Apple and T Mobile used to just power your mobile life. Now you can bank with them. And all this innovation was starting to make your bank feel dusty."</p>
-					</div><!--user-comment end-->
-					<div class="user-comment">
-						<p>"If Irish banks can find ways to embed their financial products in unique life moments along the customer journey – health, housing, education, employment – it will put them at the heart of this global transformation."</p>
-					</div><!--user-comment end-->
-					<div class="user-comment">
-						<p>"Banks should look beyond home buying and traditional mortgage and insurance products to address the entire customer journey — purchasing a home, living in it, renting it and eventually selling it..."</p>
-					</div><!--user-comment end-->
-					<div class="user-comment">
-						<p>"The agenda for banks is clear: finding a new relationship model to rebuild trust if they want to secure sustainable growth."</p>
-					</div><!--user-comment end-->
-
 				</div>
-				<div class="testimonial-nav">
-					<div class="user-info">
-						<img src="images/mckinsey.png" alt="">
-						<h3>Paul Jenkins</h3>
-						<span>McKinsey</span>
-					</div><!--user-info end-->
-					<div class="user-info">
-						<img src="images/bbva.png" alt="">
-						<h3>José Luis Arizaga</h3>
-						<span>BBVA bank</span>
-					</div><!--user-info end-->
-					<div class="user-info">
-						<img src="images/yahoo.png" alt="">
-						<h3>Julian Hebron</h3>
-						<span>Yahoo finance</span>
-					</div><!--user-info end-->
-					<div class="user-info">
-						<img src="images/ey.png" alt="">
-						<h3>Niall Corrigan</h3>
-						<span>EY</span>
-					</div><!--user-info end-->
-					<div class="user-info">
-						<img src="images/mckinsey.png" alt="">
-						<h3>Miklós Dietz</h3>
-						<span>McKinsey</span>
-					</div><!--user-info end-->
-					<div class="user-info">
-						<img src="images/accenture.png" alt="">
-						<h3>Omar Hampton</h3>
-						<span>Designer</span>
-					</div><!--user-info end-->
-					
-				</div><!--testimonial-nav end-->
 			</div>
-		</section>
+		</div>
+	</section>
+	<!-- Hero section end -->
 
-		
+	
 
-		<section class="get-started">
-			<div class="custom-container">
-				<div class="wait-sec">
-					<h3>Let's make a pilot</h3>
-					<a href="https://adpqfg0n66k.typeform.com/forbanks" title="">Let's do it</a>
-				</div><!--wait-sec end-->
+	<!-- How section -->
+	<section class="how-section spad set-bg" data-setbg="img/how-to-bg.jpg">
+		<div class="container text-white">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="section-title">
+						<h2>Kik vagyunk</h2>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<p>A Skawát két <img class="manImg" src="img/c64.png"></img>-on nevelkedett fejlesztő alapította 12 évvel ezelőtt azzal a világjobbító küldetéssel, hogy a hétköznapi emberek életét érintő problémákra találjanak minél egyszerűbben használható megoldásokat.</p>
+				</div>
 			</div>
-		</section>			
+		</div>
 
-		<footer>
-			<div class="top-footer">
-				<div class="fixed-bg footer-bg"></div>
-				<div class="custom-container">
-					<div class="top-footer-data">
-						<div class="row">
-							<div class="col-lg-3 col-md-6">
-								<div class="widget widget-about">
-									<h3 class="widget-title">About</h3>
-									<p>Realmonitor lives at the intersection of Fintech and Proptech industry by developing and providing unique proptech innovations to financial institutions. We've been developing our state-of-the-art tools for 10+ Years covering major part of the people's journey in the housing ecosystem. </p>
-								</div><!--widget-about end-->
-							</div>
-							<div class="col-lg-3 col-md-6">
-								<div class="widget widget-contact">
-									<h3 class="widget-title">Contacts</h3>
-									<ul>
-										<li><span>Address: HU-1068, Király str. 82.</span></li>
-										<li><span>Phones: +36-(20)-565-8692</span></li>
-										<li><span>Email: hello@realmonitor.hu</span></li>
-									</ul>
-								</div><!--widget-contact end-->
-							</div>
-							<div class="col-lg-6 col-md-12">
-								<div class="contact-form">
-									<form class="js-ajax-form">
-										<div class="row">
-											<div class="col-lg-6">
-												<input type="text" name="name" placeholder="Name" id="n1" required>
-											</div>
-											<div class="col-lg-6">
-												<input type="text" name="email" placeholder="Email" id="e1" required>
-											</div>
-											<div class="col-lg-12">
-												<textarea placeholder="Message" name="message" id="m1"></textarea>
-											</div>
-											<div class="col-lg-12">
-												<button type="button" class="btn-sbmt">Submit</button>
-											</div>
-											<div class="col-lg-12">
-						                    	<div class="form-group">
-							                        <div class="success-message">
-							                        	<i class="fa fa-check text-primary"></i> Thank you!. Your message is successfully sent...
-							                        </div>
-							                        <div class="error-message">We're sorry, but something went wrong
-							                        </div>
-						                      	</div>
-						                    </div>
-										</div>
-									</form>
-								</div><!--contact-form end-->
-							</div>
+		<div class="container text-white">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="how-item">
+						<div class="hi-icon">
+							<img src="img/icons/otthonrol.png" alt="">
 						</div>
-					</div><!--top-footer-data end-->
+						<h4>OTTHONROL.HU</h4>
+						<p>Elsőként a kismamáknak segítettünk otthonról végezhető munkához jutni. Ehhez létrehoztuk az otthonrol.hu-t ami hanganyagok gyors legépeltetését teszi lehetővé úgy, hogy azt 30 másodperces hangtöredékekre bontva párhuzamosan osztja ki gépelésre az otthonról dolgozó kismamáknak, aztán okosan összefűzi az eredményt. Ma 80,000-en vagyunk.</p>
+					</div>
 				</div>
-			</div><!--top-footer end-->
-			<div class="bottom-footer">
-				<div class="custom-container">
-					<div class="bottom-footer-data">
-						<p>Realmonitor © 2021.</p>
-						
-					</div><!-- bottom-footer-data end-->
+				<div class="col-md-4">
+					<div class="how-item">
+						<div class="hi-icon">
+							<img src="img/icons/joszaki.png" alt="">
+						</div>
+						<h4>JOSZAKI.HU</h4>
+						<p>Ezzel a küldetésünkkel a lakásfelújításba vágó családokat akartuk megmenteni a biztos idegösszeomlástól, ezért létrehoztuk a Joszaki.hu-t, amely ma Magyarország legnépszerűbb szakember keresője. Havonta közel 300,000 embernek segít megbízható villanyszerelőt, asztalost, kőművest vagy éppen burkolót találni.</p>
+					</div>
 				</div>
-			</div><!--bottom-footer end-->
-		</footer>	
+				<div class="col-md-4">
+					<div class="how-item">
+						<div class="hi-icon">
+							<img src="img/icons/el.png" alt="">
+						</div>
+						<h4>EASYLING.COM</h4>
+						<p>Nem találtunk jó weboldalfordító technológiát a Jószakihoz, ezért elkészítettük a sajátunkat, az Easylinget. Ma az Easylinget világszerte használják fordítóirodák, köztük az USA három legnagyobb fordítóirodája is olyan cégóriások weboldalainak fordítására, mint például az IKEA, a Nestlé vagy a Hubspot.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</section>
+	<!-- How section end -->
 
+	<!-- How section end -->
 
-	</div><!--wrapper end-->	
+	<!-- Concept section -->
+	<section class="concept-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="section-title">
+						<h2>A legnagyobb dobásunk</h2>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<p>A legnagyobb dobásunkra azonban most készülünk. Az elmúlt 4 évben létrehoztunk egy appot az ingatlankeresőknek, amely azonnal jelzi ha egy számára megfelelő ingatlan jelent meg jó áron bárhol az interneten. Ideértve a hagyományos ingatlanos oldalakat, a Facebook marketplace-t és annak sok száz csoportját is. Ez azért nagyon fontos, mert a jó ingatlanokra azonnal lecsapnak a vevők, de ezzel az appal lehetőségünk van elsőként, másokat megelőzve kapcsolatba lépni a tulajdonossal. Ezt az appot, amely már több ezer családnak segített otthonra lelni, készülünk most bevezetni a világ többi országába, hogy még többeknek segítsünk megtalálni az otthonukat.</p>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<img src="img/goglobal.png" alt="">
+	<!-- Concept section end -->
 
+<!-- Premium section end -->
+	<section class="premium-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="section-title">
+						<h2>Mit csinálunk másképp</h2>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<p>Mint minden fejlesztőcég, mi is szembesültünk az IT szektor legnagyobb kihívásával: fejlesztőinket folyamatosan bombázzák vonzó állásajánlatokkal, miközben a mi cégünk növekedésének az a feltétele, hogy további remek fejlesztőkkel bővítsük a csapatot. Erre válaszul egy mélyen humán szemléletű szervezeti kultúrát alakítottunk ki, ahol egész évben együtt dolgozunk veled a szakmain túlmutató, egyéni személyes fejlődésben is.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="premium-item">
+						<img src="img/premium/1.png" alt="">
+						<h4>Valódi cél</h4>
+						<p>Sokezer családnak segíthetsz, hogy megtalálják a számukra legjobb otthont</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="premium-item">
+						<img src="img/premium/2.png" alt="">
+						<h4>Moonshot</h4>
+						<p>Igazi diszruptív technológiát vezetünk be a világ legnagyobb iparágába</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="premium-item">
+						<img src="img/premium/3.png" alt="">
+						<h4>Elmélyült alkotás</h4>
+						<p>Fgyelünk rá, hogy a munkád ne szakítsák meg menedzserek és meetingek</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="premium-item">
+						<img src="img/premium/4.png" alt="">
+						<h4>Személyes fejlődés</h4>
+						<p>A szakmai fejlődésen túl különös figyelmet fordítunk a személyes fejlődésre</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Premium section end -->
+	
+	<!-- Subscription section -->
+	<section class="subscription-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="sub-text">
+						<h2>Itt a helyed</h2>
+						<h3>várunk a csapatba, ha</h3>
+						<p>igényes kódot írsz és szívesen részt veszel a tervezésben is. Ha örömmel alkotsz egy összetartó csapat megbecsült tagjaként és tényleg hatni akarsz a világ folyására. Ha fontos a személyes fejlődésed, a folyamatos tanulás és az új technológiák megismerése. És ha ismerősen csengenek ezek a szavak</p>
+						<a href="https://adpqfg0n66k.typeform.com/skawa" class="site-btn">Csatlakoznék</a>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<ul class="sub-list">
+						<li><img src="img/icons/check-icon.png" alt="">java + cloud</li>
+						<li><img src="img/icons/check-icon.png" alt="">docker + kubernetes</li>
+						<li><img src="img/icons/check-icon.png" alt="">nosql</li>
+						<li><img src="img/icons/check-icon.png" alt="">appengine + pubsub</li>
+						<li><img src="img/icons/check-icon.png" alt="">opencv</li>
+						<li><img src="img/icons/check-icon.png" alt="">nlp</li>				
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Subscription section end -->
 
+	
+	
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/mixitup.min.js"></script>
+	<script src="js/main.js"></script>
 
-
-
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/popper.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="lib/slick/slick.min.js"></script>
-<script type="text/javascript" src="js/html5lightbox.js"></script>
-<script type="text/javascript" src="js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="js/validator.js"></script>
-
-<script type="text/javascript" src="js/script.js"></script>
-</body>
-
+	</body>
 </html>
